@@ -49,7 +49,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="rhw-zw-d2y" kind="show" id="rzq-Vj-kgZ"/>
+                                                    <segue destination="Tv3-m7-u3Y" kind="show" id="eHr-Th-LNt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gs0-gD-xTR">
@@ -68,7 +68,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozG-h0-krf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozG-h0-krf">
                                 <rect key="frame" x="128" y="63" width="118" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="tg0-15-TYl"/>
@@ -93,17 +93,16 @@
             </objects>
             <point key="canvasLocation" x="708" y="-143"/>
         </scene>
-        <!--Sign UpVC-->
+        <!--Sign Up View Controller-->
         <scene sceneID="SNF-7i-OKN">
             <objects>
-                <viewController id="uKV-nQ-37y" customClass="SignUpVC" customModule="PeerTutor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uKV-nQ-37y" customClass="SignUpViewController" customModule="PeerTutor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7oF-TC-kPN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pa-62-7h4">
-                                <rect key="frame" x="123" y="107" width="129" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pa-62-7h4">
+                                <rect key="frame" x="123" y="107" width="129" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -139,7 +138,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="createAccountTapped:" destination="uKV-nQ-37y" eventType="touchUpInside" id="xuq-vq-ekV"/>
+                                                    <action selector="createAccountTapped:" destination="uKV-nQ-37y" eventType="touchUpInside" id="5aH-uk-OkM"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -157,9 +156,11 @@
                         <color key="backgroundColor" red="0.54342990449999995" green="0.83770073779999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="341-H4-mD6" firstAttribute="centerY" secondItem="h55-uE-D54" secondAttribute="centerY" constant="-83.5" id="Fia-VK-YYP"/>
+                            <constraint firstItem="6pa-62-7h4" firstAttribute="centerX" secondItem="341-H4-mD6" secondAttribute="centerX" id="R6P-0G-AI9"/>
                             <constraint firstItem="341-H4-mD6" firstAttribute="width" secondItem="7oF-TC-kPN" secondAttribute="width" constant="-175" id="Y64-ch-DfC"/>
                             <constraint firstItem="341-H4-mD6" firstAttribute="centerX" secondItem="h55-uE-D54" secondAttribute="centerX" constant="-0.5" id="iXX-26-7Lk"/>
                             <constraint firstItem="341-H4-mD6" firstAttribute="height" secondItem="7oF-TC-kPN" secondAttribute="height" constant="-553" id="omd-KP-e3u"/>
+                            <constraint firstItem="6pa-62-7h4" firstAttribute="top" secondItem="h55-uE-D54" secondAttribute="top" constant="43" id="p36-sc-Vpq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h55-uE-D54"/>
                     </view>
@@ -167,13 +168,14 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" id="ERg-eK-Qyh"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="emailTextField" destination="pAb-d7-dIL" id="Ouj-T2-MKG"/>
-                        <outlet property="passwordTextField" destination="Lsk-l9-69f" id="V27-ET-HDv"/>
+                        <outlet property="createAccountTapped" destination="2yH-l4-tgQ" id="pTk-oc-rmS"/>
+                        <outlet property="emailTextField" destination="pAb-d7-dIL" id="t2t-lQ-Iwa"/>
+                        <outlet property="passwordTextField" destination="Lsk-l9-69f" id="IKH-r1-pcI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wq-hU-Uwr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1543.2" y="-142.57871064467767"/>
+            <point key="canvasLocation" x="2292" y="-143.47826086956522"/>
         </scene>
         <!--Forgot PasswordVC-->
         <scene sceneID="cG7-G6-CaX">
@@ -237,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6q-4t-r0n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.2" y="639.13043478260875"/>
+            <point key="canvasLocation" x="1201" y="728"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cJz-rM-wz9">
@@ -255,25 +257,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1l-xA-8xv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="707.20000000000005" y="639.58020989505258"/>
+            <point key="canvasLocation" x="708" y="728"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="7rS-Ua-48p">
+        <scene sceneID="QB5-3q-I8c">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rhw-zw-d2y" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tv3-m7-u3Y" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hp3-EO-HWv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XbZ-cU-z6P">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="uKV-nQ-37y" kind="relationship" relationship="rootViewController" id="4kO-K9-AL3"/>
+                        <segue destination="uKV-nQ-37y" kind="relationship" relationship="rootViewController" id="IXy-QG-ePf"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qio-xY-Uuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Inr-Da-rLJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1204.8" y="-142.1289355322339"/>
+            <point key="canvasLocation" x="1474" y="-143"/>
         </scene>
     </scenes>
 </document>

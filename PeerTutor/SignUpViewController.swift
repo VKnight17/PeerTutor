@@ -1,15 +1,15 @@
 //
-//  SignUpVC.swift
+//  SignUpViewController.swift
 //  PeerTutor
 //
-//  Created by Tang Tantivirun on 1/15/18.
+//  Created by Tang Tantivirun on 1/16/18.
 //  Copyright © 2018 SPS. All rights reserved.
 //
 
 import Foundation
 import FirebaseAuth
 
-class SignUpVC: UIViewController {
+class SignUpViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
