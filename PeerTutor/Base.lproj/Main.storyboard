@@ -14,7 +14,7 @@
         <scene sceneID="mWK-7u-J9N">
             <objects>
                 <viewController id="Yde-E6-Gcz" customClass="ViewController" customModule="PeerTutor" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nba-dz-gSV" customClass="ViewController">
+                    <view key="view" contentMode="scaleToFill" id="nba-dz-gSV" customClass="View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -42,6 +42,9 @@
                                                 <state key="normal" title="Login">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="loginTapped:" destination="Yde-E6-Gcz" eventType="touchUpInside" id="6Ba-pO-mld"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLX-p6-F9m">
                                                 <rect key="frame" x="0.0" y="30" width="200" height="30"/>
@@ -88,6 +91,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v92-pz-9Bo"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="92Z-HA-epW" id="40t-IE-haB"/>
+                        <outlet property="passwordTextField" destination="h0a-Uu-wgn" id="mcI-EU-b7Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="POi-Qy-WVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,7 +176,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="createAccountTapped" destination="2yH-l4-tgQ" id="pTk-oc-rmS"/>
-                        <outlet property="emailTextField" destination="pAb-d7-dIL" id="t2t-lQ-Iwa"/>
+                        <outlet property="emailTextField" destination="pAb-d7-dIL" id="O5K-6o-Bjd"/>
                         <outlet property="passwordTextField" destination="Lsk-l9-69f" id="IKH-r1-pcI"/>
                     </connections>
                 </viewController>

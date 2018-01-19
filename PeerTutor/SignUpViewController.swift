@@ -24,7 +24,7 @@ class SignUpViewController: UIViewController {
     }
     @IBAction func createAccountTapped(_ sender: Any) {
         if emailTextField.text == "" {
-            let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Error", message: "Please enter an email and password", preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
@@ -35,7 +35,7 @@ class SignUpViewController: UIViewController {
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
                 
                 if error == nil {
-                    print("You have successfully signed up")
+                    print("You have successfully signed up.")
                     //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
                     
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
